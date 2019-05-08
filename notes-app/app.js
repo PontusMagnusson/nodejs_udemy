@@ -1,8 +1,7 @@
 const chalk = require('chalk')
+const yargs = require('yargs')
 const notes = require('./notes.js')
 
-const firstNote = notes()
+yargs.version('1.0.0')
 
-console.log(firstNote)
-
-console.log(chalk.green('Success!'))
+console.log(yargs.argv)
