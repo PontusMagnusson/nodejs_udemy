@@ -1,3 +1,3 @@
-# nodejs udemy course
+# Node.js Udemy course
 
-Testing my git settings
+Small set of applications built together with the [Udemy course](https://www.udemy.com/the-complete-nodejs-developer-course-2/) to learn Node.js.
