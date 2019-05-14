@@ -1,8 +1,8 @@
 const request = require('request')
-const readKeys = require('./readKeys')
+const getKey = require('./getKey')
 
 
-const { mapboxApiKey } = readKeys()
+const mapboxApiKey = getKey('mapboxApiKey')
 
 const geocode = (address, callback) => {
     const encodedAddress = encodeURIComponent(address)

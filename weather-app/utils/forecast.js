@@ -1,7 +1,7 @@
 const request = require('request')
-const readKeys = require('./readKeys')
+const getKey = require('./getKey')
 
-const { darkSkyApiKey } = readKeys()
+const darkSkyApiKey = getKey('darkSkyApiKey')
 
 const forecast = (latitude, longitude, callback) => {
     const url = `https://api.darksky.net/forecast/${darkSkyApiKey}/${latitude},${longitude}?units=si`
