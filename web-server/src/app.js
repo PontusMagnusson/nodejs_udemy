@@ -1,25 +1,10 @@
+const path = require('path')
 const express = require('express')
 
 const app = express()
 
-app.get('', (req, res) => {
-    res.send('<h1>Weather</h1>')
-})
-
-app.get('/help', (req, res) => {
-    res.send([{
-        name: 'Pontus',
-        age: 24
-    },{
-        name: 'David',
-        age: 29
-    }
-    ])
-})
-
-app.get('/about', (req, res) => {
-    res.send('<h1>About us!</h1>')
-})
+// Configure static resources
+app.use(express.static(path.join(__dirname, '../public')))
 
 app.get('/weather', (req, res) => {
     res.send({
