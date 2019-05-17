@@ -1,7 +1,8 @@
 const request = require('request')
 const getKey = require('./getKey')
 
-const darkSkyApiKey = getKey('darkSkyApiKey')
+ // If hosted on heroku, key can be fetched from environment variables first
+const darkSkyApiKey =  process.env.DARKSKY_API_KEY || getKey('darkSkyApiKey')
 
 const forecast = (latitude, longitude, callback) => {
     const url = `https://api.darksky.net/forecast/${darkSkyApiKey}/${latitude},${longitude}?units=si`

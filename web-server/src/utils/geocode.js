@@ -1,8 +1,8 @@
 const request = require('request')
 const getKey = require('./getKey')
 
-
-const mapboxApiKey = getKey('mapboxApiKey')
+// If hosted on heroku, key can be fetched from environment variables first
+const mapboxApiKey = process.env.MAPBOX_API_KEY || getKey('mapboxApiKey')
 
 const geocode = (address, callback) => {
     const encodedAddress = encodeURIComponent(address)
